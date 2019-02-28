@@ -1,7 +1,5 @@
 # portfolio
 
-[![Build Status](https://travis-ci.com/ShoutaWATANABE/portfolio.svg?branch=master)](https://travis-ci.com/ShoutaWATANABE/portfolio)
-
 > My Portfolio Site.
 
 ## Build Setup
