@@ -1,5 +1,11 @@
 const pkg = require('./package')
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/portfolio/'
+  }
+} : {}
+
 module.exports = {
   mode: 'universal',
 
@@ -15,6 +21,8 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+
+  routerBase,
 
   /*
   ** Customize the progress-bar color
