@@ -19,7 +19,10 @@ module.exports = {
     }
   },
   plugins: [{ src: '~/plugins/global-components.js', ssr: true }],
-  modules: [['nuxt-sass-resources-loader'], '@nuxtjs/axios', '@nuxtjs/pwa'],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/axios', '@nuxtjs/pwa'],
+  styleResources: {
+    sass: ['@/assets/scss/settings/_settings.scss']
+  },
   axios: {},
   build: {
     extend(config, ctx) {

@@ -1,0 +1,14 @@
+// ブレイクポイント
+$_bp-xxl: 1440px; // でかいPC
+$_bp-xl: 1280px; // 基本のPC
+$_bp-lg: 1024px; // 小さいPC
+$_bp-md: 991px; // タブレット
+$_bp-sm: 768px; // スマホ
+$_bp-xs: 350px; // iPhone SEなど
+
+// メディアクエリ
+$_mq-xxl: "screen and ( min-width: #{$_bp-xxl} )";
+$_mq-xl: "screen and ( min-width: #{$_bp-xl} )";
+$_mq-lg: "screen and ( min-width: #{$_bp-lg} )";
+$_mq-md: "screen and ( min-width: #{$_bp-sm} )";
+$_mq-xs: "screen and ( max-width: #{$_bp-xs + 1} )";

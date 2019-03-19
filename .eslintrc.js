@@ -15,5 +15,9 @@ module.exports = {
     'prettier'
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    "vue/html-self-closing": ["error", {
+      "svg": "any"
+    }]
+  }
 }
