@@ -20,7 +20,6 @@
 
 <style lang="scss">
 .name__svg {
-  max-height: 24px;
-  /* max-width: calc(800px * 0.18); */
+  max-height: $_font_size-md * 1.5;
 }
 </style>

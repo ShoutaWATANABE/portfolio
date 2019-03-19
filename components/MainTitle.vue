@@ -7,7 +7,7 @@
 <style lang="scss">
 .main__title {
   color: #999;
-  font-size: 24px;
+  font-size: $_font_size-md * 1.5;
   text-align: center;
 }
 </style>

@@ -16,17 +16,17 @@
 <style lang="scss">
 .header__wrap {
   background-color: #fff;
-  height: 48px;
+  height: $_font_size-md * 3;
   position: sticky;
   top: 0;
 }
 .header__ul {
-  right: 16px;
+  right: $_font_size-md;
   position: absolute;
   top: 0;
 }
 .header__li {
-  padding: 8px;
+  padding: $_font_size-md * 0.5;
   display: inline-block;
 }
 .header__link {
