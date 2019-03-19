@@ -15,7 +15,6 @@
 
 <style lang="scss">
 .portfolio__svg {
-  max-height: 24px;
-  /* max-width: calc(442.478px * 0.202); */
+  max-height: $_font_size-md * 1.5;
 }
 </style>

@@ -7,8 +7,8 @@
 .footer__wrap {
   background-color: #fff;
   color: #999;
-  font-size: 16px;
-  padding: 16px;
+  font-size: $_font_size-md;
+  padding: $_font_size-md;
   text-align: right;
 }
 </style>
