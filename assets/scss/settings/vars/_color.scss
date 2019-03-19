@@ -1,0 +1,13 @@
+$_color-primary: #1a1a1a;
+$_color-secondary: #29649f;
+$_color-tertiary: #F39F29;
+$_color-quaternary: #E70707;
+$_color-quinary: #1CA471;
+$_color-senary: #F36829;
+
+$_color-lighten: #fff;
+$_color-darken: $_color-primary;
+$_color-accent: $_color-secondary;
+$_color-flip: $_color-tertiary;
+$_color-denger: $_color-quaternary;
+$_color-grad: linear-gradient(25deg, $_color-tertiary, $_color-senary);

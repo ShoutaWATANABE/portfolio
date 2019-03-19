@@ -1,42 +1,51 @@
 <template lang="pug">
-  section.container
-    div
-      logo
-      h1.title
-        |Shouta WATANABE's Portfolio
-      h2.subtitle
-        |My Portfolio Site.
+  section
+    main-header
+    main-section
+      main-title
+        |ABOUT
+      two-contents
+        main-article
+          .icon__wrap
+            img.icon__img(src="~/assets/images/icon.jpg")
+            .icon__description
+              |ShoutaWATANABE
+        main-article
+          dl
+            dt 出身地
+            dd 宮城県石巻市
+            dt 生年月日
+            dd 1992年6月12日
+            dt 趣味
+            dd 野球観戦
+    main-section
+      main-title
+        |WORKS
+    main-section
+      main-title
+        |COLUMN
+    main-section
+      main-title
+        |SKILL
+    main-footer
 </template>
 
 <style lang="scss">
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+section {
+  background-color: #eee;
+  font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans',
+    'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo,
+    'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  .icon__wrap {
+    text-align: center;
+    .icon__img {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+    }
+    .icon__description {
+      width: 100%;
+    }
+  }
 }
 </style>

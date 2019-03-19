@@ -1,0 +1,35 @@
+@mixin mq-xxl() {
+  @media #{$_mq-xxl} {
+    @content;
+  }
+}
+
+@mixin mq-xl() {
+  @media #{$_mq-xl} {
+    @content;
+  }
+}
+
+@mixin mq-lg() {
+  @media #{$_mq-lg} {
+    @content;
+  }
+}
+
+@mixin mq-md() {
+  @media #{$_mq-md} {
+    @content;
+  }
+}
+
+@mixin mq-sm() {
+  @media #{$_mq-md} {
+    @content;
+  }
+}
+
+@mixin mq-xs() {
+  @media #{$_mq-xs} {
+    @content;
+  }
+}

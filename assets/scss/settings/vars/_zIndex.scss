@@ -1,0 +1,19 @@
+// 下が一番上のレイヤー
+$z-map: (
+  content: true,
+  header: true,
+);
+$z-map-reverse: false;
+
+// z-index
+
+// 使い方、ヘッダーのz-indexを指定する場合
+// z-index: z(header)
+
+@function z($name, $childname: 0) {
+  $getkey: map-get($z-map, $name);
+  @if $childname != 0 {
+    @return index($getkey, $childname);
+  }
+  @return inspect(index($z-map, ($name $getkey) ));
+}
