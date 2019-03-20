@@ -3,7 +3,7 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
   head: {
-    title: pkg.name,
+    title: 'ShoutaWATANABE Portfolio',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -13,13 +13,18 @@ module.exports = {
   },
   loading: { color: '#fff' },
   css: [{ src: '~/assets/scss/_base.scss', lang: 'scss' }],
+  plugins: [{ src: '~/plugins/global-components.js', ssr: true }],
+  modules: [
+    ['nuxt-webfontloader'],
+    '@nuxtjs/style-resources',
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa'
+  ],
   webfontloader: {
     google: {
-      families: ['Noto+Sans+JP']
+      families: ['Noto+Sans+JP', 'Josefin+Sans']
     }
   },
-  plugins: [{ src: '~/plugins/global-components.js', ssr: true }],
-  modules: ['@nuxtjs/style-resources', '@nuxtjs/axios', '@nuxtjs/pwa'],
   styleResources: {
     sass: ['@/assets/scss/settings/_settings.scss']
   },

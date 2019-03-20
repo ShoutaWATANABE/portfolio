@@ -3,7 +3,7 @@
     slot
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .section__wrap {
   color: #999;
   margin: 0 auto;

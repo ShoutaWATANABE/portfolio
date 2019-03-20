@@ -2,6 +2,8 @@
   section
     main-header
     main-section
+      top
+    main-section
       main-title
         |ABOUT
       two-contents
@@ -26,21 +28,21 @@
           |社内データベースの開発・運用、リクルートサイトの企画・開発・運用、ランディングページ作成など、社内プロジェクトの幅広いニーズに応えながら、日々自分のスキルを磨き続けております。
     main-section
       main-title
+        |SKILL
+    main-section
+      main-title
         |WORKS
     main-section
       main-title
         |COLUMN
-    main-section
-      main-title
-        |SKILL
     main-footer
 </template>
 
 <style lang="scss">
 section {
-  font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans',
-    'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo,
-    'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-family: 'Josefin Sans', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial',
+    'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ',
+    Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   .icon__wrap {
     text-align: center;
     .icon__img {

@@ -16,6 +16,8 @@ import PortfolioLogo from '~/components/PortfolioLogo.vue'
 
 import TwoContents from '~/components/TwoContents.vue'
 
+import Top from '~/components/Top.vue'
+
 Vue.component('MainArticle', MainArticle)
 Vue.component('MainFooter', MainFooter)
 Vue.component('MainHeader', MainHeader)
@@ -24,3 +26,4 @@ Vue.component('MainTitle', MainTitle)
 Vue.component('NameLogo', NameLogo)
 Vue.component('PortfolioLogo', PortfolioLogo)
 Vue.component('TwoContents', TwoContents)
+Vue.component('Top', Top)

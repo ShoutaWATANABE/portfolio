@@ -3,7 +3,7 @@
     slot
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .two__contents__wrap {
   display: flex;
   flex-direction: column;

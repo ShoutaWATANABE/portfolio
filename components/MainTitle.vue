@@ -4,7 +4,7 @@
       slot
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .main__title {
   color: #999;
   font-size: $_font_size-md * 1.5;
