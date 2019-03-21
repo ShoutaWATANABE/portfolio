@@ -20,6 +20,8 @@ import Top from '~/components/Top.vue'
 
 import IconDescription from '~/components/IconDescription.vue'
 
+import MainForm from '~/components/MainForm.vue'
+
 Vue.component('MainArticle', MainArticle)
 Vue.component('MainFooter', MainFooter)
 Vue.component('MainHeader', MainHeader)
@@ -30,3 +32,4 @@ Vue.component('PortfolioLogo', PortfolioLogo)
 Vue.component('TileContents', TileContents)
 Vue.component('Top', Top)
 Vue.component('IconDescription', IconDescription)
+Vue.component('MainForm', MainForm)

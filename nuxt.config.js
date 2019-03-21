@@ -11,7 +11,10 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href:'//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css'},
+      {
+        rel: 'stylesheet',
+        href: '//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css'
+      }
     ]
   },
   loading: { color: '#fff' },
