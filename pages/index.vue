@@ -54,16 +54,13 @@
     main-section(anchor="contact")
       main-title
         |CONTACT
-      main-article
-        p.is-coming__soon coming soon...
+      main-form
     main-footer
 </template>
 
 <style lang="scss">
 section {
-  font-family: 'Josefin Sans', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial',
-    'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ',
-    Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-family: 'Josefin Sans';
   .icon__wrap {
     text-align: center;
     .icon__img {
