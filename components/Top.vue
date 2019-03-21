@@ -5,13 +5,12 @@
         |ShoutaWATANABE
         br
         |Portfolio
-      top-arrow
 </template>
 
 <style lang="scss" scoped>
 .top__wrap {
   position: relative;
-  height: 550px;
+  height: 600px;
   @include mq-lg {
     height: 1000px;
   }
