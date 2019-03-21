@@ -18,7 +18,7 @@
       path(d="M768.672,38.287v9.955h-32.53v17.243h28.975v9.955h-28.975v17.598h33.775v9.955h-44.174V38.287H768.672z")
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .name__svg {
   max-height: $_font_size-md * 1.5;
 }

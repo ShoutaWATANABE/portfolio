@@ -1,10 +1,10 @@
 <template lang="pug">
-  section.two__contents__wrap
+  section.tile__contents__wrap
     slot
 </template>
 
-<style lang="scss">
-.two__contents__wrap {
+<style lang="scss" scoped>
+.tile__contents__wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;

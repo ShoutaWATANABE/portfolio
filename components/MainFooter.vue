@@ -3,7 +3,7 @@
     |(c) 2019 ShoutaWATANABE.
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .footer__wrap {
   background-color: #fff;
   color: #999;
