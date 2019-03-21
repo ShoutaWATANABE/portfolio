@@ -9,8 +9,6 @@
       li.header__li
         nuxt-link(class="header__link" v-scroll-to="'#works'" to) Works
       li.header__li
-        nuxt-link(class="header__link" v-scroll-to="'#column'" to) Column
-      li.header__li
         nuxt-link(class="header__link" v-scroll-to="'#contact'" to) Contact
 </template>
 

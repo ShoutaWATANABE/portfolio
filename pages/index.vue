@@ -22,10 +22,10 @@
             dd 野球観戦
       main-article
         p
-          |学生時代に独学でWebを学び、大学卒業後、一般職として就職しましたが、2016年9月に異動しエンジニアの道へ。
+          |学生時代にほぼ独学でWeb制作を学び、大学卒業後、現在の会社に一般職として就職しましたが、2016年9月に異動しエンジニアの道へ。
           br
           br
-          |社内データベースの開発・運用、リクルートサイトの企画・開発・運用、ランディングページ作成など、社内プロジェクトの幅広いニーズに応えながら、日々自分のスキルを磨き続けております。
+          |社内データベースの開発・運用、リクルートサイトの企画・開発・運用、ランディングページ作成など、社内プロジェクトの幅広いニーズに応えながら、自分のスキルとセンスに磨きをかける日々を送っております。
     main-section(anchor="skill")
       main-title
         |SKILL
@@ -44,19 +44,25 @@
     main-section(anchor="works")
       main-title
         |WORKS
-      main-article
-        p.is-coming__soon coming soon...
-    main-section(anchor="column")
-      main-title
-        |COLUMN
-      main-article
-        p.is-coming__soon coming soon...
+      tile-contents
+        tile-link(url="/" value="ShoutaWATANABE Portfolio" :path="portfolio")
     main-section(anchor="contact")
       main-title
         |CONTACT
       main-form
     main-footer
 </template>
+
+<script>
+import portfolio from '~/assets/images/works/portfolio.png'
+export default {
+  data() {
+    return {
+      portfolio: portfolio
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 section {
