@@ -5,6 +5,7 @@
         |ShoutaWATANABE
         br
         |Portfolio
+      top-arrow
 </template>
 
 <style lang="scss" scoped>
@@ -12,7 +13,7 @@
   position: relative;
   height: 550px;
   @include mq-lg {
-    height: 850px;
+    height: 1000px;
   }
   .top__content {
     font-size: $_font_size-lg;

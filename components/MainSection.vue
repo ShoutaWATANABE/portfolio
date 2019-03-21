@@ -1,7 +1,19 @@
 <template lang="pug">
-  section.section__wrap
+  section.section__wrap(:id="anchor")
     slot
 </template>
+
+<script>
+export default {
+  props: {
+    anchor: {
+      type: String,
+      required: true,
+      default: ''
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .section__wrap {

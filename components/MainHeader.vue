@@ -3,13 +3,13 @@
     a.header__link.is-title(href="/") ShoutaWATANABE Portfolio
     ul.header__ul
       li.header__li
-        a.header__link(href="#") About
+        nuxt-link(class="header__link" v-scroll-to="'#about'" to) About
       li.header__li
-        a.header__link(href="#") Skill
+        nuxt-link(class="header__link" v-scroll-to="'#skill'" to) Skill
       li.header__li
-        a.header__link(href="#") Works
+        nuxt-link(class="header__link" v-scroll-to="'#works'" to) Works
       li.header__li
-        a.header__link(href="#") Column
+        nuxt-link(class="header__link" v-scroll-to="'#column'" to) Column
 </template>
 
 <style lang="scss" scoped>

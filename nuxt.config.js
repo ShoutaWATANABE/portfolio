@@ -13,7 +13,10 @@ module.exports = {
   },
   loading: { color: '#fff' },
   css: [{ src: '~/assets/scss/_base.scss', lang: 'scss' }],
-  plugins: [{ src: '~/plugins/global-components.js', ssr: true }],
+  plugins: [
+    { src: '~/plugins/global-components.js', ssr: true },
+    '~/plugins/vue-scrollto'
+  ],
   modules: [
     ['nuxt-webfontloader'],
     '@nuxtjs/style-resources',

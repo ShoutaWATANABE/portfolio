@@ -3,7 +3,7 @@
     main-header
     main-section
       top
-    main-section
+    main-section(anchor="about")
       main-title
         |ABOUT
       two-contents
@@ -26,13 +26,13 @@
           br
           br
           |社内データベースの開発・運用、リクルートサイトの企画・開発・運用、ランディングページ作成など、社内プロジェクトの幅広いニーズに応えながら、日々自分のスキルを磨き続けております。
-    main-section
+    main-section(anchor="skill")
       main-title
         |SKILL
-    main-section
+    main-section(anchor="works")
       main-title
         |WORKS
-    main-section
+    main-section(anchor="column")
       main-title
         |COLUMN
     main-footer
