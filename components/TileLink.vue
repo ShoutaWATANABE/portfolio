@@ -3,7 +3,13 @@
     nuxt-link(:to="url" class="tile__link")
       img.tile__link__img(:src="path")
     .tile__link__description
+      |{{ date }}
+      br
       |{{ value }}
+    .tile__link__skill
+      span(v-for="(skill, index) in skills")
+        |{{ skill }}
+        span(v-if="skills[index+1]") /
 </template>
 
 <script>
@@ -19,10 +25,19 @@ export default {
       required: true,
       default: ''
     },
+    date: {
+      type: String,
+      required: true,
+      default: ''
+    },
     path: {
       type: String,
       required: true,
       default: ''
+    },
+    skills: {
+      type: Array,
+      required: true
     }
   }
 }
@@ -36,5 +51,9 @@ export default {
   margin: 0 auto;
   max-width: 250px;
   box-shadow: 0 0 8px gray;
+}
+.tile__link__description,
+.tile__link__skill {
+  padding: $_font_size-md * 0.25;
 }
 </style>

@@ -1,4 +1,4 @@
-const pkg = require('./package')
+// const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
@@ -7,10 +7,19 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          '渡邉将大のポートフォリオサイトです。仙台で社内エンジニアとして勤めております。'
+      }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '~/assets/images/favicon/favicon.ico'
+      },
       {
         rel: 'stylesheet',
         href: '//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css'
