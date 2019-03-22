@@ -13,11 +13,11 @@
             .icon__description
               |ShoutaWATANABE
             .icon__social__wrap
-              nuxt-link(class="icon__social__link" to="https://twitter.com/s06w12")
+              a.icon__social__link(href="https://twitter.com/s06w12")
                 font-awesome-icon(:icon="['fab', 'twitter']")
-              nuxt-link(class="icon__social__link" to="https://www.facebook.com/profile.php?id=100005684404318")
+              a.icon__social__link(href="https://www.facebook.com/profile.php?id=100005684404318")
                 font-awesome-icon(:icon="['fab', 'facebook']")
-              nuxt-link(class="icon__social__link" to="https://github.com/ShoutaWATANABE")
+              a.icon__social__link(href="https://github.com/ShoutaWATANABE")
                 font-awesome-icon(:icon="['fab', 'github']")
         main-article
           dl
