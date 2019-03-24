@@ -26,19 +26,15 @@
   top: 0;
 }
 .header__li {
-  padding: $_font_size-md * 0.25;
+  padding: $_font_size-md * 0.5;
   display: inline-block;
   @include mq-lg {
-    padding: $_font_size-md * 0.5;
+    padding: $_font_size-md;
   }
 }
 .header__link {
   color: #999;
   text-decoration: none;
-  font-size: $_font_size-md * 0.75;
-  @include mq-lg {
-    font-size: $_font_size-md;
-  }
   &:hover {
     opacity: 0.5;
   }
@@ -47,7 +43,7 @@
     @include mq-lg {
       display: inline-block;
       font-size: $_font_size-md;
-      padding: $_font_size-md * 0.5;
+      padding: $_font_size-md;
     }
   }
 }

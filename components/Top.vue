@@ -10,10 +10,8 @@
 <style lang="scss" scoped>
 .top__wrap {
   position: relative;
-  height: 600px;
-  @include mq-lg {
-    height: 1000px;
-  }
+  height: 100vh;
+  margin-top: $_font_size-md * -3;
   .top__content {
     font-size: $_font_size-lg;
     position: absolute;

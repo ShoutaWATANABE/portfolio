@@ -13,11 +13,11 @@
             .icon__description
               |ShoutaWATANABE
             .icon__social__wrap
-              a.icon__social__link(href="https://twitter.com/s06w12")
+              a.icon__social__link.is-twitter(href="https://twitter.com/s06w12" target="_blank")
                 font-awesome-icon(:icon="['fab', 'twitter']")
-              a.icon__social__link(href="https://www.facebook.com/profile.php?id=100005684404318")
+              a.icon__social__link.is-facebook(href="https://www.facebook.com/profile.php?id=100005684404318" target="_blank")
                 font-awesome-icon(:icon="['fab', 'facebook']")
-              a.icon__social__link(href="https://github.com/ShoutaWATANABE")
+              a.icon__social__link.is-github(href="https://github.com/ShoutaWATANABE" target="_blank")
                 font-awesome-icon(:icon="['fab', 'github']")
         main-article
           dl
@@ -42,7 +42,7 @@
         main-article
           icon-description(name="css3" description="CSS")
         main-article
-          icon-description(name="javascript" description="JavaScript")
+          icon-description(name="javascript_badge" description="JavaScript")
       tile-contents
         main-article
           icon-description(name="ruby_on_rails" description="Ruby on Rails")
@@ -51,8 +51,9 @@
     main-section(anchor="works")
       main-title
         |WORKS
-      tile-contents
-        tile-link(url="/" value="ShoutaWATANABE Portfolio" :date="portfolio.date" :path="portfolio.path" :skills="portfolio.skills")
+      main-article
+        tile-contents
+          tile-link(url="/" value="ShoutaWATANABE Portfolio" :date="portfolio.date" :path="portfolio.path" :skills="portfolio.skills")
     main-section(anchor="contact")
       main-title
         |CONTACT
@@ -84,6 +85,7 @@ section {
       border-radius: 50%;
       height: 100px;
       width: 100px;
+      object-fit: cover;
     }
     .icon__description {
       width: 100%;
@@ -91,6 +93,21 @@ section {
     a.icon__social__link {
       padding: 0 $_font_size-md * 0.5;
       color: #999;
+      &.is-twitter {
+        &:hover {
+          color: #55acee;
+        }
+      }
+      &.is-facebook {
+        &:hover {
+          color: #3b5998;
+        }
+      }
+      &.is-github {
+        &:hover {
+          color: #23282d;
+        }
+      }
     }
   }
   p.is-coming__soon {

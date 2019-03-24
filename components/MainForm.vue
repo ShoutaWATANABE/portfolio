@@ -7,17 +7,17 @@
         .form__item
           label Name
         .form__item
-          input(type="text" name="name")
+          input(type="text" name="name" placeholder="Your Name")
       .form__container
         .form__item
           label Mail
         .form__item
-          input(type="email" name="email")
+          input(type="email" name="email" placeholder="Your Mail")
       .form__container
         .form__item
           label Message
         .form__item
-          textarea(name="message")
+          textarea(name="message" placeholder="Your Message")
       .form__container
         .form__item.is__button
           button(type="submit") Submit

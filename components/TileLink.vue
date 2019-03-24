@@ -1,6 +1,6 @@
 <template lang="pug">
   section.tile__link__wrap
-    nuxt-link(:to="url" class="tile__link")
+    a(:href="url" class="tile__link" target="_blank")
       img.tile__link__img(:src="path")
     .tile__link__description
       |{{ date }}
