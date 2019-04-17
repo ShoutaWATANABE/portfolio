@@ -1,8 +1,28 @@
 <template lang="pug">
   section
-    main-section(anchor="top")
-      top
+    main-section(anchor="works")
+      main-title
+        |WORKS
+      main-article
+        tile-contents
+          tile-link(url="/" value="ShoutaWATANABE Portfolio" :date="portfolio.date" :path="portfolio.path" :skills="portfolio.skills")
 </template>
+
+<script>
+import portfolio from '~/assets/images/works/portfolio.png'
+
+export default {
+  data() {
+    return {
+      portfolio: {
+        date: '2019.03',
+        path: portfolio,
+        skills: ['html', 'css', 'javascript', 'nuxt.js', 'pug', 'sass']
+      }
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 section {

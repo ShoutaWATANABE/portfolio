@@ -19,6 +19,8 @@ export default {
 .section__wrap {
   color: #999;
   margin: 0 auto;
+  margin-top: calc($_font_size-md * -3);
+  min-height: 100vh;
   width: 90%;
   @include mq-lg {
     width: 50%;

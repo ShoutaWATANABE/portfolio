@@ -1,7 +1,20 @@
 <template lang="pug">
   section
-    main-section(anchor="top")
-      top
+    main-section(anchor="skill")
+      main-title
+        |SKILL
+      tile-contents
+        main-article
+          icon-description(name="html5" description="HTML")
+        main-article
+          icon-description(name="css3" description="CSS")
+        main-article
+          icon-description(name="javascript_badge" description="JavaScript")
+      tile-contents
+        main-article
+          icon-description(name="ruby_on_rails" description="Ruby on Rails")
+        main-article
+          icon-description(name="sass" description="Sass")
 </template>
 
 <style lang="scss" scoped>

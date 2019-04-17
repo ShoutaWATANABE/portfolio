@@ -10,5 +10,8 @@
   font-size: $_font_size-md;
   padding: $_font_size-md;
   text-align: right;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
 }
 </style>

@@ -1,7 +1,7 @@
 // const pkg = require('./package')
 
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
   head: {
     title: 'ShoutaWATANABE Portfolio',
     meta: [

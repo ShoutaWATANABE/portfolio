@@ -1,7 +1,9 @@
 <template lang="pug">
   section
-    main-section(anchor="top")
-      top
+    main-section(anchor="contact")
+      main-title
+        |CONTACT
+      main-form
 </template>
 
 <style lang="scss" scoped>
