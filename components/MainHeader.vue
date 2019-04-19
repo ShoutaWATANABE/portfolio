@@ -19,7 +19,7 @@
 <style lang="scss" scoped>
 .header__wrap {
   background-color: #fff;
-  font-family: 'Josefin Sans';
+  font-family: 'Josefin Sans', sans-serif;
   height: $_font_size-md * 3;
   position: sticky;
   top: 0;

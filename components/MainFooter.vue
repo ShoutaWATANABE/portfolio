@@ -7,6 +7,7 @@
 .footer__wrap {
   background-color: #fff;
   color: #999;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: $_font_size-md;
   padding: $_font_size-md;
   text-align: right;
