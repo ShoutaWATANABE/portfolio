@@ -19,7 +19,6 @@
 
 <style lang="scss" scoped>
 section {
-  font-family: 'Josefin Sans', sans-serif;
   .icon__wrap {
     text-align: center;
     .icon__img {

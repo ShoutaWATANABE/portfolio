@@ -7,12 +7,6 @@
 
 <style>
 html {
-  @font-face {
-    font-family: 'Josefin Sans';
-    font-display: swap;
-  }
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

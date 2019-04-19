@@ -3,23 +3,18 @@
     nuxt-link(class="header__link is-title" to="/") ShoutaWATANABE Portfolio
     ul.header__ul
       li.header__li
-        // nuxt-link(class="header__link" v-scroll-to="'#about'" to) About
         nuxt-link(class="header__link" to="/about") About
       li.header__li
-        // nuxt-link(class="header__link" v-scroll-to="'#skill'" to) Skill
         nuxt-link(class="header__link" to="/skill") Skill
       li.header__li
-        // nuxt-link(class="header__link" v-scroll-to="'#works'" to) Works
         nuxt-link(class="header__link" to="/works") Works
       li.header__li
-        // nuxt-link(class="header__link" v-scroll-to="'#contact'" to) Contact
         nuxt-link(class="header__link" to="/contact") Contact
 </template>
 
 <style lang="scss" scoped>
 .header__wrap {
   background-color: #fff;
-  font-family: 'Josefin Sans', sans-serif;
   height: $_font_size-md * 3;
   position: sticky;
   top: 0;
