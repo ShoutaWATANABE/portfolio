@@ -15,6 +15,7 @@
           icon-description(name="ruby_on_rails" description="Ruby on Rails")
         main-article
           icon-description(name="sass" description="Sass")
+      home-link
 </template>
 
 <style lang="scss" scoped>

@@ -6,6 +6,7 @@
       main-article
         tile-contents
           tile-link(url="/" value="ShoutaWATANABE Portfolio" :date="portfolio.date" :path="portfolio.path" :skills="portfolio.skills")
+      home-link
 </template>
 
 <script>

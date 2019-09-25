@@ -4,6 +4,7 @@
       main-title
         |CONTACT
       main-form
+      home-link
 </template>
 
 <style lang="scss" scoped>

@@ -20,6 +20,8 @@ import MainForm from '~/components/MainForm.vue'
 
 import TileLink from '~/components/TileLink.vue'
 
+import HomeLink from '~/components/HomeLink.vue'
+
 Vue.component('MainArticle', MainArticle)
 Vue.component('MainFooter', MainFooter)
 Vue.component('MainHeader', MainHeader)
@@ -30,3 +32,4 @@ Vue.component('Top', Top)
 Vue.component('IconDescription', IconDescription)
 Vue.component('MainForm', MainForm)
 Vue.component('TileLink', TileLink)
+Vue.component('HomeLink', HomeLink)

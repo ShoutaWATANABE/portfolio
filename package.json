@@ -4,7 +4,7 @@
   "author": "ShoutaWATANABE",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "PORT=3333 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
