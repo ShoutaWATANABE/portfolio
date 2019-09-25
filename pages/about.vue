@@ -11,7 +11,7 @@
             .icon__description
               |ShoutaWATANABE
             .icon__social__wrap
-              a.icon__social__link.is-twitter(href="https://twitter.com/s06w12" target="_blank")
+              a.icon__social__link.is-twitter(href="https://twitter.com/_ShoutaWATANABE" target="_blank")
                 font-awesome-icon(:icon="['fab', 'twitter']")
               a.icon__social__link.is-facebook(href="https://www.facebook.com/profile.php?id=100005684404318" target="_blank")
                 font-awesome-icon(:icon="['fab', 'facebook']")
