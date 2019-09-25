@@ -34,7 +34,7 @@ module.exports = {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '~/assets/images/card.png'
+        content: 'https://shoutawatanabe-portfolio.netlify.com/card.png'
       },
       { hid: 'og:site_name', name: 'og:site_name', content: 'ShoutaWATANABE Portfolio' }
     ],
