@@ -1,7 +1,6 @@
 {
   "name": "Portfolio",
   "version": "1.0.0",
-  "description": "My Portfolio Site.",
   "author": "ShoutaWATANABE",
   "private": true,
   "scripts": {
