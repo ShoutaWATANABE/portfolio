@@ -61,6 +61,7 @@ module.exports = {
     'nuxt-fontawesome',
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
+    '@nuxtjs/onesignal',
     '@nuxtjs/pwa'
   ],
   webfontloader: {
@@ -82,6 +83,15 @@ module.exports = {
   },
   styleResources: {
     sass: ['@/assets/scss/settings/_settings.scss']
+  },
+  oneSignal: {
+    init: {
+      appId: '6102719c-0b2e-4412-939d-5962d4aed4ae',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+        disable: true
+      }
+    }
   },
   axios: {},
   build: {
