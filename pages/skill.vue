@@ -15,6 +15,13 @@
           icon-description(name="ruby_on_rails" description="Ruby on Rails")
         main-article
           icon-description(name="sass" description="Sass")
+        main-article
+          icon-description(name="vim" description="Vim")
+      tile-contents
+        main-article
+          icon-description(name="aws" description="AWS")
+        main-article
+          icon-description(name="docker" description="Docker")
       home-link
 </template>
 
@@ -50,10 +57,6 @@ section {
         }
       }
     }
-  }
-  p.is-coming__soon {
-    padding: $_font_size-md * 10 0;
-    text-align: center;
   }
 }
 </style>

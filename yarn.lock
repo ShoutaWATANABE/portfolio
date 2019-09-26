@@ -3466,6 +3466,11 @@ detect-libc@^1.0.2:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
 
+devicons@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/devicons/-/devicons-1.8.0.tgz#df725a8b0ac2cce24c74b782c2f14f8b73832c2d"
+  integrity sha1-33JaiwrCzOJMdLeCwvFPi3ODLC0=
+
 diffie-hellman@^5.0.0:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/diffie-hellman/-/diffie-hellman-5.0.3.tgz#40e8ee98f55a2149607146921c63e1ae5f3d2875"

@@ -43,15 +43,14 @@ module.exports = {
         rel: 'icon',
         type: 'image/x-icon',
         href: '~/assets/images/favicon/favicon.ico'
-      },
-      {
-        rel: 'stylesheet',
-        href: '//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css'
       }
     ]
   },
   loading: { color: '#fff' },
-  css: [{ src: '~/assets/scss/_base.scss', lang: 'scss' }],
+  css: [
+    { src: '~/assets/scss/_base.scss', lang: 'scss' },
+    { src: '~/node_modules/devicons/css/devicons.scss', lang: 'scss'}
+  ],
   plugins: [
     { src: '~/plugins/global-components.js', ssr: true },
     '~/plugins/vue-scrollto'
