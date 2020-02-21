@@ -16,12 +16,14 @@
         main-article
           icon-description(name="sass" description="Sass")
         main-article
-          icon-description(name="vim" description="Vim")
+          icon-description(name="python" description="Python")
       tile-contents
         main-article
           icon-description(name="aws" description="AWS")
         main-article
           icon-description(name="docker" description="Docker")
+        main-article
+          icon-description(name="vim" description="Vim")
       home-link
 </template>
 
