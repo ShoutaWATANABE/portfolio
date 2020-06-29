@@ -1,6 +1,9 @@
 <template lang="pug">
   section.icon__description__wrap
-    .icon__description__span.devicons(:class="'devicons-'+name")
+    div(v-if="awesome")
+      font-awesome-icon(:icon="[awesome, name]" class="icon__description__span fa-fw")
+    div(v-else)
+      .icon__description__span.devicons(:class="'devicons-'+name")
     |{{ description }}
 </template>
 
@@ -15,6 +18,11 @@ export default {
     description: {
       type: String,
       required: true,
+      default: ''
+    },
+    awesome: {
+      type: String,
+      required: false,
       default: ''
     }
   }

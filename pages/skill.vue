@@ -24,6 +24,11 @@
           icon-description(name="docker" description="Docker")
         main-article
           icon-description(name="vim" description="Vim")
+      tile-contents
+        main-article
+          icon-description(name="vuejs" description="Vue.js" awesome="fab")
+        main-article
+          icon-description(name="react" description="React.js")
       home-link
 </template>
 
