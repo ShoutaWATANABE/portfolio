@@ -46,6 +46,7 @@ export default {
 <style lang="scss" scoped>
 .tile__link__wrap {
   text-align: center;
+  padding-bottom: 3rem;
 }
 .tile__link__img {
   margin: 0 auto;
@@ -54,6 +55,5 @@ export default {
 }
 .tile__link__description,
 .tile__link__skill {
-  padding: $_font_size-md * 0.25;
 }
 </style>

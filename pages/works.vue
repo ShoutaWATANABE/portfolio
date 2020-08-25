@@ -6,11 +6,14 @@
       main-article
         tile-contents
           tile-link(url="/" value="ShoutaWATANABE Portfolio" :date="portfolio.date" :path="portfolio.path" :skills="portfolio.skills")
+        tile-contents
+          tile-link(url="https://www.hinaken.com" value="日向研究室 公式サイト" :date="hinaken.date" :path="hinaken.path" :skills="hinaken.skills")
       home-link
 </template>
 
 <script>
 import portfolio from '~/assets/images/works/portfolio.png'
+import hinaken from '~/assets/images/works/hinaken.png'
 
 export default {
   data() {
@@ -18,7 +21,12 @@ export default {
       portfolio: {
         date: '2019.03',
         path: portfolio,
-        skills: ['html', 'css', 'javascript', 'nuxt.js', 'pug', 'sass']
+        skills: ['Vue.js', 'Nuxt.js', 'pug', 'Sass']
+      },
+      hinaken: {
+        date: '2020.09',
+        path: hinaken,
+        skills: ['React.js', 'Next.js', 'TypeScript', 'Sass']
       }
     }
   }
