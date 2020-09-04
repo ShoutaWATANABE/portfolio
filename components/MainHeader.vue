@@ -9,6 +9,8 @@
       li.header__li
         nuxt-link(class="header__link" to="/works") Works
       li.header__li
+        nuxt-link(class="header__link" to="/blog") Blog
+      li.header__li
         nuxt-link(class="header__link" to="/contact") Contact
 </template>
 
