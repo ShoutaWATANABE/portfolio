@@ -25,8 +25,7 @@ axios.defaults.headers.post['Access-Control-Allow-Headers'] = 'x-requested-with'
 export default {
   async asyncData() {
     // 記事を取得する
-    const url =
-      '/api/ShoutaWATANABE/moratoriumlife.hatenablog.jp/atom/entry'
+    const url = '/api/ShoutaWATANABE/moratoriumlife.hatenablog.jp/atom/entry'
     const res = await axios.get(url, {
       auth: {
         username: process.env.HATENA_NAME,
@@ -34,13 +33,12 @@ export default {
       }
     })
     // 記事を格納する
-    let itemList = []
+    const itemList = []
     xml2js.parseString(res.data.toString(), (err, result) => {
       if (err) {
-        reject(err)
+        // reject(err)
       } else {
         const entry = result.feed.entry
-        const next_url = result.feed.link[1].$.href;
         for (const e of entry) {
           if (e['app:control'][0]['app:draft'][0] === 'yes') {
             continue

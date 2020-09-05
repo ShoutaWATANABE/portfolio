@@ -27,9 +27,9 @@ export default {
       default: ''
     },
     category: {
-      type: [],
+      type: Array,
       required: false,
-      default: []
+      default: () => []
     }
   }
 }
@@ -41,60 +41,59 @@ export default {
     padding: 1rem;
     position: relative;
     text-align: left;
-    border-bottom: solid 1px #AAA;
+    border-bottom: solid 1px #aaa;
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       display: block;
       height: 3.5rem;
       width: 5px;
       left: 0;
       top: 0;
-      background-color: #DDD;
+      background-color: #ddd;
     }
   }
   &__contents {
     text-align: center;
   }
-  &__item{
-    border-bottom: dotted 1px #AAA;
+  &__item {
+    border-bottom: dotted 1px #aaa;
     padding: 1rem;
     text-align: left;
     line-height: 1.5rem;
   }
   &__category {
     background: #999;
-    color: #FFF;
-    padding: .25rem 1rem;
-    font-size: .5rem;
+    color: #fff;
+    padding: 0.25rem 1rem;
+    font-size: 0.5rem;
     border-radius: 20px;
     &:hover {
       cursor: pointer;
-      opacity: .5;
+      opacity: 0.5;
     }
     a {
-      color: #FFF;
+      color: #fff;
       text-decoration: none;
     }
     &.is-hinaken {
-      background: #FF7800;
+      background: #ff7800;
     }
     &.is-qiita {
-      background: #56C500;
+      background: #56c500;
     }
     &:not(:last-of-type) {
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
   &__link {
     display: block;
     text-decoration: none;
-    color: #AAA;
-    margin: .5rem 0;
+    color: #aaa;
+    margin: 0.5rem 0;
     &:hover {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 }
-
 </style>

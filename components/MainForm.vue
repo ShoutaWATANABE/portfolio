@@ -44,7 +44,7 @@ textarea {
 }
 button {
   color: #fff;
-  border: 2px solid #CCC;
+  border: 2px solid #ccc;
   background-color: #ccc;
   border-radius: 5px;
   padding: $_font_size-md * 0.5 $_font_size-md * 2;

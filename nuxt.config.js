@@ -95,21 +95,27 @@ module.exports = {
   },
   axios: {},
   proxy: {
-    '/api': { target: 'https://blog.hatena.ne.jp', pathRewrite: {'^/api/': ''} },
+    '/api':
+    process.env.NODE_ENV !== 'production'
+      ? {
+          target: 'https://blog.hatena.ne.jp',
+          pathRewrite: {'^/api/': ''}
+        }
+      : {
+          target: 'https://blog.hatena.ne.jp',
+          pathRewrite: { '^.*\/api': '' }
+        }
   },
-  // build: {
-  //   extend(config, ctx) {
-  //     if (ctx.isDev && ctx.isClient) {
-  //       config.module.rules.push({
-  //         enforce: 'pre',
-  //         test: /\.(js|vue)$/,
-  //         loader: 'eslint-loader',
-  //         exclude: /(node_modules)/
-  //       })
-  //     }
-  //   }
-  // },
-  "rules": {
-    "no-console": 1
+  build: {
+    extend(config, ctx) {
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    }
   }
 }
