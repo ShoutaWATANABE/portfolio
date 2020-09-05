@@ -17,16 +17,20 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/vue-fontawesome": "^0.1.10",
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/onesignal": "^3.0.0-beta.16",
     "@nuxtjs/pwa": "^3.0.2",
     "core-js": "^3.6.5",
     "cross-env": "^5.2.0",
     "devicons": "^1.8.0",
+    "fs": "0.0.1-security",
+    "moment": "^2.27.0",
     "nuxt": "^2.14.4",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-webfontloader": "^1.0.0",
     "regenerator-runtime": "^0.13.7",
-    "vue-scrollto": "^2.18.2"
+    "vue-scrollto": "^2.18.2",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
