@@ -4,14 +4,10 @@
       main-title
         |BLOG
       main-article
-        ul
-          li(v-for="(post, index) in posts" :key=index)
-            |{{ post.day }}
-            |{{ post.title }}
-            p
-              span(v-for="(cate, index) in post.category" :key=index)
-                |{{ cate.$.term }}
-        a(href="https://moratoriumlife.hatenablog.jp/") and more...
+        div(v-for="(post, index) in posts" :key=index )
+          blog-item(:day="post.day" :title="post.title" :category="post.category" :href="post.href")
+        div.blog__link__wrap
+          a(href="https://moratoriumlife.hatenablog.jp/") and more...
       home-link
 </template>
 
@@ -65,39 +61,8 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  .icon__wrap {
-    text-align: center;
-    .icon__img {
-      border-radius: 50%;
-      height: 100px;
-      width: 100px;
-      object-fit: cover;
-    }
-    .icon__description {
-      width: 100%;
-    }
-    a.icon__social__link {
-      padding: 0 $_font_size-md * 0.5;
-      color: #999;
-      &.is-twitter {
-        &:hover {
-          color: #55acee;
-        }
-      }
-      &.is-facebook {
-        &:hover {
-          color: #3b5998;
-        }
-      }
-      &.is-github {
-        &:hover {
-          color: #23282d;
-        }
-      }
-    }
-  }
-  p.is-coming__soon {
-    padding: $_font_size-md * 10 0;
+  .blog__link__wrap {
+    padding: 1rem 0;
     text-align: center;
   }
 }
