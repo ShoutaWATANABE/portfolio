@@ -25,7 +25,9 @@ axios.defaults.headers.post['Access-Control-Allow-Headers'] = 'x-requested-with'
 export default {
   async asyncData() {
     // 記事を取得する
-    const url = '/api/ShoutaWATANABE/moratoriumlife.hatenablog.jp/atom/entry'
+    const url = process.env.NODE_ENV !== 'production'
+    ? '/api/ShoutaWATANABE/moratoriumlife.hatenablog.jp/atom/entry'
+    : 'https://blog.hatena.ne.jp/ShoutaWATANABE/moratoriumlife.hatenablog.jp/atom/entry'
     const res = await axios.get(url, {
       auth: {
         username: process.env.HATENA_NAME,
