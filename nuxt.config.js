@@ -93,18 +93,14 @@ module.exports = {
   styleResources: {
     sass: ['@/assets/scss/settings/_settings.scss']
   },
-  axios: {},
+  axios: {
+    proxy: true
+  },
   proxy: {
-    '/api':
-    process.env.NODE_ENV !== 'production'
-      ? {
-          target: 'https://blog.hatena.ne.jp',
-          pathRewrite: {'^/api/': ''}
-        }
-      : {
-          target: 'https://blog.hatena.ne.jp',
-          pathRewrite: { '^.*\/api': '' }
-        }
+    '/api': {
+      target: 'https://blog.hatena.ne.jp',
+      pathRewrite: {'^/api/': ''}
+    }
   },
   build: {
     extend(config, ctx) {
