@@ -98,7 +98,7 @@ module.exports = {
   },
   proxy: {
     '/api': {
-      target: 'https://blog.hatena.ne.jp',
+      target: process.env.API_PROXY_URL,
       pathRewrite: {'^/api/': ''}
     }
   },

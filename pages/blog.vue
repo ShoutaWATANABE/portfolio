@@ -29,7 +29,6 @@ export default {
     }
   },
   async mounted() {
-    // async asyncData() {
     // 記事を取得する
     const url = '/api/ShoutaWATANABE/moratoriumlife.hatenablog.jp/atom/entry'
     const res = await axios.get(url, {
@@ -59,7 +58,6 @@ export default {
         }
       }
     })
-    // return { posts: itemList.slice(0, 5) }
     this.posts = itemList.slice(0, 5)
   }
 }
