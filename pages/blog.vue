@@ -16,12 +16,6 @@ import axios from 'axios'
 import xml2js from 'xml2js'
 import moment from 'moment'
 
-axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8'
-axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*'
-axios.defaults.headers.post['Access-Control-Allow-Methods'] =
-  'POST,GET,OPTIONS,DELETE'
-axios.defaults.headers.post['Access-Control-Allow-Headers'] = 'x-requested-with'
-
 export default {
   data() {
     return {
@@ -31,12 +25,25 @@ export default {
   async mounted() {
     // 記事を取得する
     const url = '/api/ShoutaWATANABE/moratoriumlife.hatenablog.jp/atom/entry'
-    const res = await axios.get(url, {
-      auth: {
-        username: process.env.HATENA_NAME,
-        password: process.env.HATENA_PASS
-      }
-    })
+    const res = await axios
+      .create({
+        baseURL: process.browser ? '' : process.env.API_URL,
+        withCredentials: process.env.NODE_ENV !== 'production',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,DELETE',
+          'Access-Control-Allow-Headers': 'x-requested-with',
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        timeout: 20000
+      })
+      .get(url, {
+        auth: {
+          username: process.env.HATENA_NAME,
+          password: process.env.HATENA_PASS
+        }
+      })
     // 記事を格納する
     const itemList = []
     xml2js.parseString(res.data.toString(), (err, result) => {
