@@ -14,7 +14,11 @@ module.exports = {
           '渡邉将大のポートフォリオサイトです。仙台で社内エンジニアとして勤めております。'
       },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
-      { hid: 'twitter:site', name: 'twitter:site', content: '@_ShoutaWATANABE' },
+      {
+        hid: 'twitter:site',
+        name: 'twitter:site',
+        content: '@_ShoutaWATANABE'
+      },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:title',
@@ -29,14 +33,19 @@ module.exports = {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: '渡邉将大のポートフォリオサイトです。仙台で社内エンジニアとして勤めております。'
+        content:
+          '渡邉将大のポートフォリオサイトです。仙台で社内エンジニアとして勤めております。'
       },
       {
         hid: 'og:image',
         property: 'og:image',
         content: 'https://shoutawatanabe-portfolio.netlify.com/card.png'
       },
-      { hid: 'og:site_name', name: 'og:site_name', content: 'ShoutaWATANABE Portfolio' }
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'ShoutaWATANABE Portfolio'
+      }
     ],
     link: [
       {
@@ -49,7 +58,7 @@ module.exports = {
   loading: { color: '#fff' },
   css: [
     { src: '~/assets/scss/_base.scss', lang: 'scss' },
-    { src: '~/node_modules/devicons/css/devicons.scss', lang: 'scss'}
+    { src: '~/node_modules/devicons/css/devicons.scss', lang: 'scss' }
   ],
   plugins: [
     { src: '~/plugins/global-components.js', ssr: true },
@@ -60,7 +69,9 @@ module.exports = {
     'nuxt-fontawesome',
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/proxy',
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
   ],
   webfontloader: {
     google: {
@@ -82,7 +93,15 @@ module.exports = {
   styleResources: {
     sass: ['@/assets/scss/settings/_settings.scss']
   },
-  axios: {},
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api': {
+      target: process.env.API_PROXY_URL,
+      pathRewrite: {'^/api/': '/'}
+    }
+  },
   build: {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
