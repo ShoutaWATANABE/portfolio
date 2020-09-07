@@ -2,14 +2,6 @@
 
 module.exports = {
   mode: 'spa',
-  env: {
-    HATENA_NAME: process.env.HATENA_NAME,
-    HATENA_PATH: process.env.HATENA_PATH,
-    API_URL: process.env.API_URL,
-    API_PROXY_URL: process.env.API_PROXY_URL,
-    API_HOST: process.env.API_HOST,
-    BASE_URL: process.env.BASE_URL,
-  },
   head: {
     title: 'ShoutaWATANABE Portfolio',
     meta: [
@@ -77,9 +69,7 @@ module.exports = {
     'nuxt-fontawesome',
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
-    '@nuxtjs/proxy',
     '@nuxtjs/pwa',
-    '@nuxtjs/dotenv',
   ],
   webfontloader: {
     google: {
@@ -101,28 +91,17 @@ module.exports = {
   styleResources: {
     sass: ['@/assets/scss/settings/_settings.scss']
   },
-  axios: {
-    proxy: true,
-    baseURL: process.env.BASE_URL,
-    browserBaseURL: process.env.BASE_URL,
-  },
-  proxy: {
-    '/api': {
-      target: process.env.API_PROXY_URL,
-      changeOrigin: true,
-      pathRewrite: {'^/api/': '/'}
-    }
-  },
-  build: {
-    extend(config, ctx) {
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  }
+  axios: {},
+  // build: {
+  //   extend(config, ctx) {
+  //     if (ctx.isDev && ctx.isClient) {
+  //       config.module.rules.push({
+  //         enforce: 'pre',
+  //         test: /\.(js|vue)$/,
+  //         loader: 'eslint-loader',
+  //         exclude: /(node_modules)/
+  //       })
+  //     }
+  //   }
+  // }
 }

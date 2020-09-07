@@ -5,15 +5,14 @@
         |BLOG
       main-article
         div(v-for="(post, index) in posts" :key=index )
-          blog-item(:day="post.day" :title="post.title" :category="post.category" :href="post.href")
+          blog-item(:day="post.date" :title="post.title" :category="post.category" :href="post.href")
         div.blog__link__wrap
-          a(href="https://moratoriumlife.hatenablog.jp/") and more...
+          a(href="https://blog.shoutawatanabe.info/") and more...
       home-link
 </template>
 
 <script>
 import axios from 'axios'
-import xml2js from 'xml2js'
 import moment from 'moment'
 
 export default {
@@ -24,48 +23,30 @@ export default {
   },
   async mounted() {
     // 記事を取得する
-    const url = '/api/ShoutaWATANABE/moratoriumlife.hatenablog.jp/atom/entry'
-    const res = await axios
-      .create({
-        baseURL: process.browser ? '' : process.env.API_URL,
-        withCredentials: process.env.NODE_ENV !== 'production',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,DELETE',
-          'Access-Control-Allow-Headers': 'x-requested-with',
-          'X-Requested-With': 'XMLHttpRequest'
-        },
-        timeout: 20000
-      })
-      .get(url, {
-        auth: {
-          username: process.env.HATENA_NAME,
-          password: process.env.HATENA_PASS
-        }
-      })
-    // 記事を格納する
-    const itemList = []
-    xml2js.parseString(res.data.toString(), (err, result) => {
-      if (err) {
-        // reject(err)
-      } else {
-        const entry = result.feed.entry
-        for (const e of entry) {
-          if (e['app:control'][0]['app:draft'][0] === 'yes') {
-            continue
-          }
-          const item = {
-            day: moment(e.updated.toString()).format('YYYY-MM-DD'),
-            title: e.title.toString(),
-            category: e.category,
-            href: e.link[1].$.href
-          }
-          itemList.push(item)
-        }
+    const url = 'https://blog.shoutawatanabe.info/wp-json/wp/v2/'
+    let itemList = []
+    const posts_data = await axios.get(url+ 'posts?per_page=5&_envelope')
+    // const tags_data = await axios.get(url+ 'tags?per_page=100&_envelope')
+    const categories_data = await axios.get(url+ 'categories?per_page=100&_envelope')
+    for (const post of posts_data.data.body) {
+      let category_group = [];
+      if ( post.categories.length > 0 ) {
+        post.categories.map((post_category)=>{
+          category_group = category_group.concat(categories_data.data.body.filter((category) => {
+            if (post_category == category.id) return true;
+          }))
+        })
       }
-    })
-    this.posts = itemList.slice(0, 5)
+      const item = {
+        date: moment(post.date).format('YYYY-MM-DD'),
+        title: post.title.rendered,
+        category: category_group,
+        href: post.link
+      }
+      itemList.push(item)
+    }
+    // 記事を格納する
+    this.posts = itemList
   }
 }
 </script>
