@@ -8,6 +8,7 @@ module.exports = {
     API_URL: process.env.API_URL,
     API_PROXY_URL: process.env.API_PROXY_URL,
     API_HOST: process.env.API_HOST,
+    BASE_URL: process.env.BASE_URL,
   },
   head: {
     title: 'ShoutaWATANABE Portfolio',
@@ -101,7 +102,9 @@ module.exports = {
     sass: ['@/assets/scss/settings/_settings.scss']
   },
   axios: {
-    proxy: true
+    proxy: true,
+    baseURL: process.env.BASE_URL,
+    browserBaseURL: process.env.BASE_URL,
   },
   proxy: {
     '/api': {
