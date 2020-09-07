@@ -22,30 +22,57 @@ export default {
     }
   },
   async mounted() {
-    // 記事を取得する
-    const url = 'https://blog.shoutawatanabe.info/wp-json/wp/v2/'
-    let itemList = []
-    const posts_data = await axios.get(url+ 'posts?per_page=5&_envelope')
-    // const tags_data = await axios.get(url+ 'tags?per_page=100&_envelope')
-    const categories_data = await axios.get(url+ 'categories?per_page=100&_envelope')
-    for (const post of posts_data.data.body) {
-      let category_group = [];
-      if ( post.categories.length > 0 ) {
-        post.categories.map((post_category)=>{
-          category_group = category_group.concat(categories_data.data.body.filter((category) => {
-            if (post_category == category.id) return true;
-          }))
+    const url =
+      process.env.NODE_ENV !== 'production'
+        ? '/api/'
+        : 'https://blog.shoutawatanabe.info/wp-json/wp/v2/'
+    const itemList = []
+    const postsData = await axios
+      .create({
+        withCredentials: process.env.NODE_ENV !== 'production',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,DELETE',
+          'Access-Control-Allow-Headers': 'x-requested-with',
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        timeout: 20000
+      })
+      .get(url + 'posts?per_page=5&_envelope')
+    // const tags_data = await axios.get(url + 'tags?per_page=100&_envelope')
+    const categoriesData = await axios
+      .create({
+        withCredentials: process.env.NODE_ENV !== 'production',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,DELETE',
+          'Access-Control-Allow-Headers': 'x-requested-with',
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        timeout: 20000
+      })
+      .get(url + 'categories?per_page=100&_envelope')
+    for (const post of postsData.data.body) {
+      let categoryGroup = []
+      if (post.categories.length > 0) {
+        post.categories.map(postCategory => {
+          categoryGroup = categoryGroup.concat(
+            categoriesData.data.body.filter(category => {
+              if (postCategory === category.id) return true
+            })
+          )
         })
       }
       const item = {
         date: moment(post.date).format('YYYY-MM-DD'),
         title: post.title.rendered,
-        category: category_group,
+        category: categoryGroup,
         href: post.link
       }
       itemList.push(item)
     }
-    // 記事を格納する
     this.posts = itemList
   }
 }

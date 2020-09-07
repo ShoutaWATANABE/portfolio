@@ -69,7 +69,9 @@ module.exports = {
     'nuxt-fontawesome',
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
   ],
   webfontloader: {
     google: {
@@ -91,17 +93,25 @@ module.exports = {
   styleResources: {
     sass: ['@/assets/scss/settings/_settings.scss']
   },
-  axios: {},
-  // build: {
-  //   extend(config, ctx) {
-  //     if (ctx.isDev && ctx.isClient) {
-  //       config.module.rules.push({
-  //         enforce: 'pre',
-  //         test: /\.(js|vue)$/,
-  //         loader: 'eslint-loader',
-  //         exclude: /(node_modules)/
-  //       })
-  //     }
-  //   }
-  // }
+  axios: {
+    proxy: true,
+  },
+  proxy: {
+    '/api': {
+      target: process.env.API_PROXY_URL,
+      pathRewrite: {'^/api/': '/'}
+    }
+  },
+  build: {
+    extend(config, ctx) {
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    }
+  }
 }
