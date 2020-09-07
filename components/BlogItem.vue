@@ -3,9 +3,9 @@
     |{{ day }}
     a.blog__link(:href="href")
       |{{ title }}
-    span.blog__category(v-for="(cate, index) in category" :key=index  :class="'is-' + cate.$.term")
-      a(:href="'https://moratoriumlife.hatenablog.jp/archive/category/' + cate.$.term")
-        |{{ cate.$.term }}
+    span.blog__category(v-for="(cate, index) in category" :key=index  :class="'is-' + cate.name")
+      a(:href="'http://blog.shoutawatanabe.info/category/' + cate.name")
+        |{{ cate.name }}
 </template>
 
 <script>

@@ -2,14 +2,6 @@
 
 module.exports = {
   mode: 'spa',
-  env: {
-    HATENA_NAME: process.env.HATENA_NAME,
-    HATENA_PATH: process.env.HATENA_PATH,
-    API_URL: process.env.API_URL,
-    API_PROXY_URL: process.env.API_PROXY_URL,
-    API_HOST: process.env.API_HOST,
-    BASE_URL: process.env.BASE_URL,
-  },
   head: {
     title: 'ShoutaWATANABE Portfolio',
     meta: [
@@ -103,13 +95,10 @@ module.exports = {
   },
   axios: {
     proxy: true,
-    baseURL: process.env.BASE_URL,
-    browserBaseURL: process.env.BASE_URL,
   },
   proxy: {
     '/api': {
       target: process.env.API_PROXY_URL,
-      changeOrigin: true,
       pathRewrite: {'^/api/': '/'}
     }
   },
