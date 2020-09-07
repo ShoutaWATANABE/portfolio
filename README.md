@@ -1,6 +1,8 @@
-# portfolio
+# My Portfolio Site.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6b18d43f-53b9-49f0-b296-27e38ccb1b67/deploy-status)](https://app.netlify.com/sites/shoutawatanabe-portfolio/deploys)
+[https://shoutawatanabe.info](https://shoutawatanabe.info)
 
-> My Portfolio Site.
-> [https://shoutawatanabe-portfolio.netlify.com/](https://shoutawatanabe-portfolio.netlify.com/)
+
+Powerd by Netlify.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/942d301c-2c0d-4219-8cf5-7741a05976dc/deploy-status)](https://app.netlify.com/sites/shoutawatanabe-portfolio/deploys)
