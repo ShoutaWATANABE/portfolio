@@ -22,10 +22,7 @@ export default {
     }
   },
   async mounted() {
-    const url =
-      process.env.NODE_ENV !== 'production'
-        ? '/api/'
-        : 'https://blog.shoutawatanabe.info/wp-json/wp/v2/'
+    const url = 'https://blog.shoutawatanabe.info/wp-json/wp/v2/'
     const itemList = []
     const postsData = await axios.get(url + 'posts?per_page=5&_envelope')
     // const tags_data = await axios.get(url + 'tags?per_page=100&_envelope')
