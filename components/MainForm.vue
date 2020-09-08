@@ -1,9 +1,7 @@
 <template lang="pug">
   section
-    // form(name="contact_form" netlify-honeypot="bot-field" action="/thanks" data-netlify="true" method="post")
-    form(name="contact_form" data-netlify="true" method="post")
-      input(type="hidden" name="form-name" value="contact_form")
-      // input(type="hidden" name="bot-field")
+    form(name="contact" method="POST" data-netlify-honeypot="bot-field" data-netlify="true")
+      input(type="hidden" name="form-name" value="contact")
       .form__container
         .form__item
           label Name
