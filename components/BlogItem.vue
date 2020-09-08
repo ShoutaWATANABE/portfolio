@@ -3,7 +3,7 @@
     |{{ day }}
     a.blog__link(:href="href")
       |{{ title }}
-    span.blog__category(v-for="(cate, index) in category" :key=index  :class="'is-' + cate.name")
+    span.blog__category(v-for="(cate, index) in category" :key=index  :class="'is-' + cate.slug")
       a(:href="'http://blog.shoutawatanabe.info/category/' + cate.name")
         |{{ cate.name }}
 </template>
