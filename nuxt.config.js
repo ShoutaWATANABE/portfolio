@@ -9,7 +9,7 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content:
-          '渡邉将大のポートフォリオサイトです。仙台で社内エンジニアとして勤めております。'
+          '渡邉将大のポートフォリオサイトです。'
       },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
       {
@@ -32,7 +32,7 @@ module.exports = {
         hid: 'og:description',
         property: 'og:description',
         content:
-          '渡邉将大のポートフォリオサイトです。仙台で社内エンジニアとして勤めております。'
+          '渡邉将大のポートフォリオサイトです。'
       },
       {
         hid: 'og:image',
