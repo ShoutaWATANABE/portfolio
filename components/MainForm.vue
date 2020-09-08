@@ -1,6 +1,6 @@
 <template lang="pug">
   section
-    form(name="contact" method="POST" data-netlify-honeypot="bot-field" data-netlify="true")
+    form(name="contact" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" action="/thanks")
       input(type="hidden" name="form-name" value="contact")
       .form__container
         .form__item

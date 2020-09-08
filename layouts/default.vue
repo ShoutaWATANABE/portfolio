@@ -5,6 +5,15 @@
     main-footer
 </template>
 
+<script>
+import Vue from 'vue'
+import MainHeader from '~/components/MainHeader.vue'
+import MainFooter from '~/components/MainFooter.vue'
+Vue.component('MainHeader', MainHeader)
+Vue.component('MainFooter', MainFooter)
+export default {}
+</script>
+
 <style>
 html {
   font-size: 16px;

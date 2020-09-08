@@ -1,6 +1,6 @@
 <template lang="pug">
   section
-    main-section(anchor="blog")
+    main-section
       main-title
         |BLOG
       main-article
@@ -12,8 +12,13 @@
 </template>
 
 <script>
+import Vue from 'vue'
+
 import axios from 'axios'
 import moment from 'moment'
+
+import BlogItem from '~/components/BlogItem.vue'
+Vue.component('BlogItem', BlogItem)
 
 export default {
   data() {

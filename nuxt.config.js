@@ -1,5 +1,3 @@
-// const pkg = require('./package')
-
 module.exports = {
   mode: 'spa',
   head: {
@@ -57,12 +55,10 @@ module.exports = {
   },
   loading: { color: '#fff' },
   css: [
-    { src: '~/assets/scss/_base.scss', lang: 'scss' },
     { src: '~/node_modules/devicons/css/devicons.scss', lang: 'scss' }
   ],
   plugins: [
     { src: '~/plugins/global-components.js', ssr: true },
-    '~/plugins/vue-scrollto'
   ],
   modules: [
     ['nuxt-webfontloader'],
@@ -89,7 +85,7 @@ module.exports = {
     ]
   },
   styleResources: {
-    sass: ['@/assets/scss/settings/_settings.scss']
+    sass: ['@/assets/scss/_base.scss']
   },
   axios: {},
   build: {

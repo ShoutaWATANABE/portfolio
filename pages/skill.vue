@@ -1,6 +1,6 @@
 <template lang="pug">
   section
-    main-section(anchor="skill")
+    main-section
       main-title
         |SKILL
       tile-contents
@@ -31,6 +31,15 @@
           icon-description(name="react" description="React.js")
       home-link
 </template>
+
+<script>
+import Vue from 'vue'
+import TileContents from '~/components/TileContents.vue'
+import IconDescription from '~/components/IconDescription.vue'
+Vue.component('TileContents', TileContents)
+Vue.component('IconDescription', IconDescription)
+export default {}
+</script>
 
 <style lang="scss" scoped>
 section {

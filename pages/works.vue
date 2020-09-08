@@ -12,8 +12,15 @@
 </template>
 
 <script>
+import Vue from 'vue'
+
 import portfolio from '~/assets/images/works/portfolio.png'
 import hinaken from '~/assets/images/works/hinaken.png'
+
+import TileContents from '~/components/TileContents.vue'
+import TileLink from '~/components/TileLink.vue'
+Vue.component('TileContents', TileContents)
+Vue.component('TileLink', TileLink)
 
 export default {
   data() {

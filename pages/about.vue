@@ -1,7 +1,6 @@
 <template lang="pug">
   section
-    // main-header
-    main-section(anchor="about")
+    main-section
       main-title
         |ABOUT
       tile-contents
@@ -40,6 +39,13 @@
           li 機械学習を活用した業務アプリの開発
       home-link
 </template>
+
+<script>
+import Vue from 'vue'
+import TileContents from '~/components/TileContents.vue'
+Vue.component('TileContents', TileContents)
+export default {}
+</script>
 
 <style lang="scss" scoped>
 section {
