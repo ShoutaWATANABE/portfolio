@@ -1,6 +1,6 @@
 <template lang="pug">
   layout
-    section.thanks__wrap
+    .thanks__wrap
       h1 Thank you for your message.
       home-link
 </template>

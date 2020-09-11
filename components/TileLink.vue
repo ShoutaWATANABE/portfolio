@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.tile__link__wrap
+  .tile__link__wrap
     a(:href="url" class="tile__link" target="_blank")
       img.tile__link__img(:src="path")
     .tile__link__description

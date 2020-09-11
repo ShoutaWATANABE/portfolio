@@ -1,13 +1,13 @@
 <template lang="pug">
-  section.nav__drawer
-    input#nav__input.nav__unshown(type="checkbox" v-model="modal")
+  .nav__drawer
+    input#nav__input.nav__unshown(type="checkbox")
     label#nav__open(for="nav__input")
       font-awesome-icon(:icon="['fas', 'bars']" class="fa-fw")
     label#nav__close.nav__unshown(for="nav__input")
     #nav__content
       ul.float__ul
         li.float__li
-          nuxt-link(class="float__link" to="/" @click="checkFalse") Home
+          nuxt-link(class="float__link" to="/") Home
         li.float__li
           nuxt-link(class="float__link" to="/about") About
         li.float__li
@@ -20,22 +20,6 @@
           nuxt-link(class="float__link" to="/contact") Contact
 
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      modal: false,
-    }
-  },
-  methods: {
-    checkFalse: function() {
-      console.log(this.modal)
-      this.modal = false
-    }
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 .float {

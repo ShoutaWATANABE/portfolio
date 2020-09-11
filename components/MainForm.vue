@@ -1,25 +1,24 @@
 <template lang="pug">
-  section
-    form(name="contact" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" action="/thanks")
-      input(type="hidden" name="form-name" value="contact")
-      .form__container
-        .form__item
-          label Name
-        .form__item
-          input(type="text" name="name" placeholder="Your Name" required="required")
-      .form__container
-        .form__item
-          label Mail
-        .form__item
-          input(type="email" name="email" placeholder="Your Mail" required="required")
-      .form__container
-        .form__item
-          label Message
-        .form__item
-          textarea(name="message" placeholder="Your Message" required="required")
-      .form__container
-        .form__item.is__button
-          button(type="submit") Submit
+  form(name="contact" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" action="/thanks")
+    input(type="hidden" name="form-name" value="contact")
+    .form__container
+      .form__item
+        label Name
+      .form__item
+        input(type="text" name="name" placeholder="Your Name" required="required")
+    .form__container
+      .form__item
+        label Mail
+      .form__item
+        input(type="email" name="email" placeholder="Your Mail" required="required")
+    .form__container
+      .form__item
+        label Message
+      .form__item
+        textarea(name="message" placeholder="Your Message" required="required")
+    .form__container
+      .form__item.is__button
+        button(type="submit") Submit
 </template>
 
 <style lang="scss" scoped>

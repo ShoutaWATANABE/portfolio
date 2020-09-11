@@ -7,14 +7,6 @@
 </template>
 
 <style lang="scss" scoped>
-.top__wrap {
-  /* position: relative; */
-  height: 100%;
-  min-height: calc(100vh - 60px);
-  @include mq-lg {
-    min-height: calc(100vh - 120px);
-  }
-}
 .top__content {
     font-size: $_font_size-lg;
     position: absolute;
