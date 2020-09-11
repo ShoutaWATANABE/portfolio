@@ -1,14 +1,15 @@
 <template lang="pug">
-  section
-    main-section
-      main-title
-        |BLOG
-      main-article
-        div(v-for="(post, index) in posts" :key=index )
-          blog-item(:day="post.date" :title="post.title" :category="post.category" :href="post.href")
-        div.blog__link__wrap
-          a(href="https://blog.shoutawatanabe.info/") and more...
-      home-link
+  layout
+    section
+      main-section
+        main-title
+          |BLOG
+        main-article
+          div(v-for="(post, index) in posts" :key=index )
+            blog-item(:day="post.date" :title="post.title" :category="post.category" :href="post.href")
+          div.blog__link__wrap
+            a(href="https://blog.shoutawatanabe.info/") and more...
+        home-link
 </template>
 
 <script>

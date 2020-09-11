@@ -1,14 +1,15 @@
 <template lang="pug">
-  section
-    main-section(anchor="works")
-      main-title
-        |WORKS
-      main-article
-        tile-contents
-          tile-link(url="/" value="ShoutaWATANABE Portfolio" :date="portfolio.date" :path="portfolio.path" :skills="portfolio.skills")
-        tile-contents
-          tile-link(url="https://hinaken.com" value="日向研究室 公式サイト" :date="hinaken.date" :path="hinaken.path" :skills="hinaken.skills")
-      home-link
+  layout
+    section
+      main-section(anchor="works")
+        main-title
+          |WORKS
+        main-article
+          tile-contents
+            tile-link(url="/" value="ShoutaWATANABE Portfolio" :date="portfolio.date" :path="portfolio.path" :skills="portfolio.skills")
+          tile-contents
+            tile-link(url="https://hinaken.com" value="日向研究室 公式サイト" :date="hinaken.date" :path="hinaken.path" :skills="hinaken.skills")
+        home-link
 </template>
 
 <script>

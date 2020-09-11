@@ -1,7 +1,8 @@
 <template lang="pug">
-  section.thanks__wrap
-    h1 Thank you for your message.
-    home-link
+  layout
+    section.thanks__wrap
+      h1 Thank you for your message.
+      home-link
 </template>
 
 <style lang="scss" scoped>

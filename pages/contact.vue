@@ -1,10 +1,11 @@
 <template lang="pug">
-  section
-    main-section
-      main-title
-        |CONTACT
-      main-form
-      home-link
+  layout
+    section
+      main-section
+        main-title
+          |CONTACT
+        main-form
+        home-link
 </template>
 
 <script>

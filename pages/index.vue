@@ -1,7 +1,8 @@
 <template lang="pug">
-  section
-    main-section
-      top
+  layout
+    section
+      main-section
+        top
 </template>
 
 <script>

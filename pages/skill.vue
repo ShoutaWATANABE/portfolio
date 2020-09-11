@@ -1,35 +1,36 @@
 <template lang="pug">
-  section
-    main-section
-      main-title
-        |SKILL
-      tile-contents
-        main-article
-          icon-description(name="html5" description="HTML")
-        main-article
-          icon-description(name="css3" description="CSS")
-        main-article
-          icon-description(name="javascript_badge" description="JavaScript")
-      tile-contents
-        main-article
-          icon-description(name="ruby_on_rails" description="Ruby on Rails")
-        main-article
-          icon-description(name="sass" description="Sass")
-        main-article
-          icon-description(name="python" description="Python")
-      tile-contents
-        main-article
-          icon-description(name="aws" description="AWS")
-        main-article
-          icon-description(name="docker" description="Docker")
-        main-article
-          icon-description(name="vim" description="Vim")
-      tile-contents
-        main-article
-          icon-description(name="vuejs" description="Vue.js" awesome="fab")
-        main-article
-          icon-description(name="react" description="React.js")
-      home-link
+  layout
+    section
+      main-section
+        main-title
+          |SKILL
+        tile-contents
+          main-article
+            icon-description(name="html5" description="HTML")
+          main-article
+            icon-description(name="css3" description="CSS")
+          main-article
+            icon-description(name="javascript_badge" description="JavaScript")
+        tile-contents
+          main-article
+            icon-description(name="ruby_on_rails" description="Ruby on Rails")
+          main-article
+            icon-description(name="sass" description="Sass")
+          main-article
+            icon-description(name="python" description="Python")
+        tile-contents
+          main-article
+            icon-description(name="aws" description="AWS")
+          main-article
+            icon-description(name="docker" description="Docker")
+          main-article
+            icon-description(name="vim" description="Vim")
+        tile-contents
+          main-article
+            icon-description(name="vuejs" description="Vue.js" awesome="fab")
+          main-article
+            icon-description(name="react" description="React.js")
+        home-link
 </template>
 
 <script>
