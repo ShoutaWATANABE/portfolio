@@ -44,7 +44,7 @@
     &:last-of-type {
       margin-right: 0;
     }
-    &:first-child{
+    &:first-child {
       margin-right: auto;
     }
   }

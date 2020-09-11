@@ -59,8 +59,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .blog__link__wrap {
-    padding: 1rem 0;
-    text-align: center;
-  }
+.blog__link__wrap {
+  padding: 1rem 0;
+  text-align: center;
+}
 </style>
