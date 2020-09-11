@@ -1,7 +1,6 @@
 <template lang="pug">
-  section
-    .main__title
-      slot
+  .main__title
+    slot
 </template>
 
 <style lang="scss" scoped>

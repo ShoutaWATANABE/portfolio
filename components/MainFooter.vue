@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.footer__wrap
+  .footer__wrap
     |(c) 2019 ShoutaWATANABE.
 </template>
 

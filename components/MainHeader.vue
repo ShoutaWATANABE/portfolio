@@ -1,7 +1,8 @@
 <template lang="pug">
-  section.header__wrap
-    nuxt-link(class="header__link is-title" to="/") ShoutaWATANABE Portfolio
+  .header__wrap
     ul.header__ul
+      li.header__li
+        nuxt-link(class="header__link" to="/") ShoutaWATANABE Portfolio
       li.header__li
         nuxt-link(class="header__link" to="/about") About
       li.header__li
@@ -16,36 +17,46 @@
 
 <style lang="scss" scoped>
 .header__wrap {
-  background-color: #fff;
-  height: $_font_size-md * 3;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  display: none;
+  @include mq-lg {
+    display: block;
+    background-color: #fff;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 }
 .header__ul {
-  right: $_font_size-md;
-  position: absolute;
-  top: 0;
+  display: none;
+  padding: 1rem;
+  @include mq-lg {
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 .header__li {
-  padding: $_font_size-md * 0.5;
-  display: inline-block;
+  display: none;
   @include mq-lg {
-    padding: $_font_size-md;
+    display: block;
+    margin-right: 1rem;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &:first-child{
+      margin-right: auto;
+    }
   }
 }
 .header__link {
-  color: #999;
-  text-decoration: none;
-  &:hover {
-    opacity: 0.5;
-  }
-  &.is-title {
-    display: none;
-    @include mq-lg {
-      display: inline-block;
-      font-size: $_font_size-md;
-      padding: $_font_size-md;
+  display: none;
+  @include mq-lg {
+    display: inline-block;
+    color: #999;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.5;
     }
   }
 }

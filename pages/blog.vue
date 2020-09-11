@@ -1,5 +1,5 @@
 <template lang="pug">
-  section
+  layout
     main-section
       main-title
         |BLOG
@@ -59,10 +59,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
   .blog__link__wrap {
     padding: 1rem 0;
     text-align: center;
   }
-}
 </style>

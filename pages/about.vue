@@ -1,5 +1,5 @@
 <template lang="pug">
-  section
+  layout
     main-section
       main-title
         |ABOUT
@@ -48,7 +48,6 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-section {
   .icon__wrap {
     text-align: center;
     .icon__img {
@@ -83,5 +82,4 @@ section {
   p {
     padding: $_font_size-md 0;
   }
-}
 </style>

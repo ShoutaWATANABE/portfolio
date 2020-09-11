@@ -1,5 +1,5 @@
 <template lang="pug">
-  section
+  div
     nuxt-link(class="home__link" to="/") ← Home
 </template>
 

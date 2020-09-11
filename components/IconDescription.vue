@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.icon__description__wrap
+  .icon__description__wrap
     div(v-if="awesome")
       font-awesome-icon(:icon="[awesome, name]" class="icon__description__span fa-fw")
     div(v-else)
@@ -33,7 +33,12 @@ export default {
 .icon__description {
   &__wrap {
     text-align: center;
+    padding: $_font_size-md $_font_size-md * 0.5;
+    width: 50%;
     @include mq-lg {
+      width: auto;
+      min-width: 30%;
+      padding: $_font_size-md * 3;
     }
   }
   &__span {
