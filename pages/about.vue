@@ -4,7 +4,7 @@
       main-title
         |ABOUT
       tile-contents
-        main-article
+        about-article
           .icon__wrap
             img.icon__img(src="~/assets/images/icon.jpg")
             .icon__description
@@ -16,7 +16,7 @@
                 font-awesome-icon(:icon="['fab', 'facebook']")
               a.icon__social__link.is-github(href="https://github.com/ShoutaWATANABE" target="_blank")
                 font-awesome-icon(:icon="['fab', 'github']")
-        main-article
+        about-article
           dl
             dt 出身地
             dd 宮城県石巻市
@@ -43,7 +43,9 @@
 <script>
 import Vue from 'vue'
 import TileContents from '~/components/TileContents.vue'
+import AboutArticle from '~/components/AboutArticle.vue'
 Vue.component('TileContents', TileContents)
+Vue.component('AboutArticle', AboutArticle)
 export default {}
 </script>
 

@@ -1,7 +1,21 @@
 <template lang="pug">
   .footer__wrap
-    |(c) 2019 ShoutaWATANABE.
+    |(c) 2019 - {{ year }} ShoutaWATANABE.
 </template>
+
+
+<script>
+const dt = new Date()
+const year = dt.getFullYear()
+
+export default {
+  data() {
+    return {
+      year: year
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .footer__wrap {
