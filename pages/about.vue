@@ -6,7 +6,7 @@
       tile-contents
         about-article
           .icon__wrap
-            img.icon__img(src="~/assets/images/icon.jpg")
+            img.icon__img(src="https://github.com/ShoutaWATANABE.png")
             .icon__description
               |ShoutaWATANABE
             .icon__social__wrap
